@@ -10,7 +10,7 @@ let navControl = {
     out: '',
     startBox: '',
     endBox: '',
-    //动作预配置
+    //预配置
     config: function (boxNane, obj) {
         this.boxNaneArray.push(boxNane);
         this.actionArray[boxNane] = obj;
@@ -34,7 +34,7 @@ let navControl = {
         for (var i in this.dataArray) {
             this.endBox = i;
         }
-        $('.' + this.startBox).show();//以后改用id
+        $('#' + this.startBox).show();
         this.actionArray[this.startBox] && this.actionArray[this.startBox].beforeIn && this.actionArray[this.startBox].beforeIn();
     },
     //流程配置，只有一个流程时不用配置
