@@ -1,3 +1,4 @@
+// 控制器
 let navControl = {
     position: 0,
     navArray: [],
@@ -88,3 +89,38 @@ let navControl = {
         progressBar.prev();
     }
 };
+
+// 使用示例
+navControl.config('step0', {
+    beforeOut: function (data) {
+        // 离开>下一步
+    }
+}).config('excelBox', {
+    beforeOut: function (data) {
+        // 离开>下一步
+    },
+    afterOut: function () {
+        // 离开>返回上一步
+    }
+}).config('step1', {
+    beforeIn: function (count) {
+        // 进入
+    },
+    beforeOut: function (data) {
+
+    },
+    afterIn: function () {
+
+    }
+}).config('step2', {
+    beforeIn: function (count) {
+
+    },
+    beforeOut: function (data) {
+
+    }
+}).config('step3', {
+    beforeIn: function (submitData) {
+
+    }
+}).start();
