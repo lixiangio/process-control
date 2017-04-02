@@ -1,4 +1,3 @@
-//导航控制器
 let navControl = {
     position: 0,
     navArray: [],
